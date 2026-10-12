@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veridev</title>
+    <meta name="description" content="Veridev превращает хаотичную генерацию кода в управляемый процесс. Сначала контракт и тесты, потом реализация.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">
+                <span class="veri">Veri</span><span class="dev">DEV</span><span class="dot">.</span>
+            </h1>
+            <p class="tagline">AI-валидация кода и архитектуры для тех, кто ценит чистоту кода</p>
+        </header>
+
+        <section class="hero">
+            <h2>Хватит исправлять архитектурный хаос после нейросетей</h2>
+            <p class="hero-text">Обычные AI-кодеры генерируют хрупкие решения, которые компилируются, но не проходят реальное код-ревью из-за нарушения архитектурных инвариантов</p>
+            
+            <div class="cta-group">
+                <a href="#waitlist" class="btn-primary">Получить ранний доступ</a>
+                <span class="cta-note">Бесплатно для первых 100 разработчиков</span>
+            </div>
+        </section>
+
+        <!-- БЛОК СРАВНЕНИЯ: ПРОБЛЕМА VS РЕШЕНИЕ -->
+        <section class="comparison">
+            <div class="comparison-card bad">
+                <div class="card-header">
+                    <span class="icon">❌</span>
+                    <h3>Обычный AI-кодинг</h3>
+                </div>
+                <ul class="card-list">
+                    <li>AI генерирует 500 строк монолитного кода</li>
+                    <li>Контракты компонентов не соответствуют выбранным библиотекам</li>
+                    <li>Стиль кода меняется от генерации к генерации</li>
+                    <li>Domain-логика оказывается в Presentation слое</li>
+                    <li>Тесты пишутся не проверяют реальное поведение</li>
+                    <li>Техлид тратит <strong>2 часа</strong> на ревью и исправление архитектурных нарушений</li>
+                    <li>К окончанию ревью приходит новая партия сгенерированного кода</li>
+                    <li>Технический долг растет быстрее, чем фичи</li>
+                </ul>
+            </div>
+            <div class="comparison-card good">
+                <div class="card-header">
+                    <span class="icon">✅</span>
+                    <h3>Подход Veridev</h3>
+                </div>
+                <ul class="card-list">
+                    <li>AI анализирует поведение внешних сервисов и библиотек</li>
+                    <li>AI формирует строгий архитектурный контракт</li>
+                    <li>Архитектура наглядна и согласуется с разработчиком</li>
+                    <li>Система автоматически генерирует юнит-тесты</li>
+                    <li>Код генерируется <strong>только</strong> для прохождения этих тестов</li>
+                    <li>Нарушение слоев (например, прямой запрос к БД из UI) блокируется</li>
+                    <li>AI поднимает систему и проводит e2e-тестирование</li>
+                    <li>Вы получаете готовый Pull Request, качество которого остается под контролем</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ЭТАП 1: ПОДГОТОВКА -->
+        <section class="how-it-works">
+            <h2 class="section-title">Этап 1: Подготовка и контекст</h2>
+            <div class="pipeline">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Требования к стилю</h4>
+                    <p>Veridev подготовит линтер и сформулирует требования к документированию, логированию и структуре проекта.</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Описание задачи</h4>
+                    <p>Вы описываете систему на естественном языке. Veridev анализирует карту архитектуры репозитория и предлагает решения.</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Подготовка окружения</h4>
+                    <p>Система загружает реальные сервисы и библиотеки, определяет целевое поведение и пишет спецификацию на конкретную версию внешней связи.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ЭТАП 2: ГЕНЕРАЦИЯ -->
+        <section class="how-it-works">
+            <h2 class="section-title">Этап 2: Генерация и валидация</h2>
+            <div class="pipeline pipeline-2">
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Контракт и тесты</h4>
+                    <p>Система создает машиночитаемый контракт (API, схемы данных) и генерирует тесты, которые этот контракт проверяют.</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h4>Валидированный код</h4>
+                    <p>AI пишет код, который обязан пройти тесты. Если архитектура нарушена, генерация отклоняется. Создается чистый PR.</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h4>E2E-тестирование</h4>
+                    <p>Система запускается в песочнице и проверяются ключевые сценарии работы.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ВИЗУАЛЬНЫЙ ЯКОРЬ: ИМИТАЦИЯ ИНТЕРФЕЙСА -->
+        <section class="visual-proof">
+            <div class="interface-mockup">
+                <div class="mockup-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="title">Veridev — Контракт #142</span>
+                </div>
+                <div class="mockup-body">
+                    <div class="mockup-row">
+                        <span class="label">Задача:</span>
+                        <span class="value">Добавить эндпоинт регистрации пользователей</span>
+                    </div>
+                    <div class="mockup-row">
+                        <span class="label">Архитектура:</span>
+                        <span class="value">Controller → Service → Repository ✅</span>
+                    </div>
+                    <div class="mockup-row">
+                        <span class="label">Тесты:</span>
+                        <span class="value success">12/12 пройдено</span>
+                    </div>
+                    <div class="mockup-row">
+                        <span class="label">Нарушения:</span>
+                        <span class="value success">0 найдено</span>
+                    </div>
+                    <div class="mockup-row highlight">
+                        <span class="label">Статус:</span>
+                        <span class="value success">✅ Готов к мержу</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <div class="icon">📐</div>
+                <h3>Контракты, а не промпты</h3>
+                <p>AI работает со строгими спецификациями. Никаких галлюцинаций и нарушения границ слоев.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🧪</div>
+                <h3>Тесты до написания кода</h3>
+                <p>Поведенческие тесты генерируются на основе контракта. Код, который их не проходит, физически не попадет в репозиторий.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🗺️</div>
+                <h3>Живая карта архитектуры</h3>
+                <p>Автоматическое построение графа сервисов и зависимостей. AI понимает контекст всей системы, а не одного файла.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🔒</div>
+                <h3>Ваш ключ, ваши данные (BYOK)</h3>
+                <p>Подключите свой API-ключ. Ваш код и промпты никогда не покидают ваш периметр.</p>
+            </div>
+        </section>
+
+        <section class="cta" id="waitlist">
+            <h2>Верните контроль над кодовой базой</h2>
+            <p>Мы запускаем закрытую бету Veridev. Оставьте email, чтобы получить приглашение и доступ к документации.</p>
+            
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="signup-form">
+                <input type="email" name="email" placeholder="your@email.com" required>
+                <button type="submit">Получить доступ</button>
+            </form>
+            <p class="note">Никакого спама. Только важные обновления о запуске и доступ к бете.</p>
+        </section>
+
+        <footer>
+            <p>© 2026 Veridev. Built for developers, by developers.</p>
+        </footer>
+    </div>
+</body>
+</html>
